@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @field.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @field.user_id %>
+</p>
+
+<p>
+  <strong>Planet:</strong>
+  <%= @field.planet_id %>
+</p>
+
+<p>
+  <strong>Pos x:</strong>
+  <%= @field.pos_x %>
+</p>
+
+<p>
+  <strong>Pos y:</strong>
+  <%= @field.pos_y %>
+</p>
+
+<%= link_to 'Edit', edit_field_path(@field) %> |
+<%= link_to 'Back', fields_path %>

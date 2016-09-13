@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @planet.name %>
+</p>
+
+<p>
+  <strong>System:</strong>
+  <%= @planet.system_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @planet.position %>
+</p>
+
+<p>
+  <strong>Discovered at:</strong>
+  <%= @planet.discovered_at %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @planet.house_id %>
+</p>
+
+<p>
+  <strong>Available to all:</strong>
+  <%= @planet.available_to_all %>
+</p>
+
+<%= link_to 'Edit', edit_planet_path(@planet) %> |
+<%= link_to 'Back', planets_path %>

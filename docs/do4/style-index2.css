@@ -1,0 +1,460 @@
+body {
+	color:#fff;
+	background-color:#000; 
+	background-image: url(image/cssimage/bg.jpg);
+	font-family: Calibri, Arial, Verdana;
+	font-size: 13px;
+	text-align: justify;
+	text-shadow: 0.05em 0.05em #000 !important;
+	}
+	
+/* ++++++++++++++++++++ Hlavní tìlo webu ++++++++++++++++++++ */
+
+#body_wrapper {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#body_container {
+	position: relative;
+	top: -280px;
+	margin: 0px auto; 
+	z-index: 1;
+	background-image: url(image/cssimage/tseda.png);
+	border: solid 1px #a2a2a2;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#body_container_b {
+	width: 1100px;
+	z-index: 1;
+	min-width:500px;
+}
+
+.planet {
+	position: relative;
+	left: -50px;
+	top: -40px;
+	background-image: url(image/cssimage/arrakis.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	z-index: 0 !important;
+	width: 1200px;
+	height: 400px;
+	border: 0;
+}
+
+.header {
+	position: relative;
+	left: -1px;
+	top: -120px;
+	background-image: url(image/cssimage/head0.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	z-index: 1;
+	width: 1100px;
+	height: 180px;
+	border: 0;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+.stred  {
+	z-index: 2;
+	min-height: 430px;
+	margin-top:0px;
+}
+
+#page_content {
+	width: 1104px;
+	font-size: 1em;
+	margin: -90px 0 0 -23px;
+	padding: 0 20px 15px 20px;
+	min-height: 500px;
+	z-index: 2;
+}
+
+td.left {width: 15%; vertical-align: top;}
+
+td.stred {
+	width: 70%;
+	vertical-align: top;
+}
+
+td.prava {
+	width: 15%;
+	vertical-align: top;
+}
+
+.footer {
+	width: 1100px;
+	height: 30px;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+/* ++++++++++++++++++++ Lista ++++++++++++++++++++ */	
+  
+div.lista{
+	position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: auto;
+  padding: 3px 0 3px 0;
+	font-size: 10px !important;
+	text-shadow: 0.1em 0.1em #000 !important;
+	text-align: right;
+  vertical-align: middle;
+	background-image: url(image/cssimage/td1.png);
+	border: 0;
+	border-bottom: solid 1px #696969;
+	border-top: solid 1px #696969;
+	z-index: 3 !important;
+}
+    div.lista a{
+		  border: 0 !important;
+		}	
+    
+		div.lista li{
+		list-style: none;
+		}	
+		div.lista input{
+      	float: right;
+      	padding: 3px 5px 3px 5px !important;
+        margin: 0 1px 0 1px;
+      	width: auto !important;
+      	background-color: transparent;
+      	background-image: url(image/cssimage/td1.png);
+      	color: #a2a2a2;	
+        font-size: 10px !important;
+      	text-decoration: none !important;
+      	font-weight: bold !important;
+      	vertical-align: middle;
+      	text-align: center;
+      	border: 1px solid #696969;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      }
+		div.lista input:hover {color:#ffdb30; border:#ffdb30 1px solid; text-decoration: none !important;}
+
+/* ++++++++++++++++++++ Menu + hlavièka ++++++++++++++++++++ */
+
+div.infi {
+	position: absolute; top: 55px; left: 27px;
+	width: 818px;
+	height: 128px;
+	background-image:url(image/cssimage/tseda.png); 
+	z-index: 3;
+	font-size: 1em;
+	padding: 7px 0px 7px 0px;
+	vertical-align: middle;
+	border: solid 1px #a9a9a9;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+		
+#navai {
+	position: absolute;
+	top: 119px;
+	left: -1px;
+	z-index: 3;
+	width: 1102px;
+	height:50px;
+	background-image: url(image/cssimage/head1102i.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	border-bottom: solid 0px #3399ff;
+}
+
+/* ++++++++++++++++++++ Formátování nástìnek ++++++++++++++++++++ */
+	
+div.lh {
+	color:#ffdb30;
+	font-weight: bolder;
+	width: 150px;
+	padding: 7px 10px 7px 15px;
+	margin: 0px 20px 0px -1px;
+	border: 1px solid #a2a2a2;
+	border-bottom: 1px solid #ffdb30;
+	background-image: url(image/cssimage/td1.png);
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topright: 4px;
+border-top-right-radius: 4px;
+	}
+div.l {
+	color:#fff;
+	width: 150px;
+	padding: 10px 10px 10px 15px;
+	margin: 0px 20px 15px -1px;
+	border: 1px solid #a2a2a2;
+	border-top: 0px;
+	background-image: url(image/cssimage/tseda.png);
+-webkit-border-bottom-right-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+border-bottom-right-radius: 4px;
+	}
+	
+			div.l li{list-style: none;}
+	
+			div.l input{
+			margin: 7px 2px 5px 2px;
+			padding: 3px 5px 3px 25px;
+			width:112px;
+			font-size: 11px;
+			color: #ffdb30;
+			vertical-align: middle;
+			background: transparent;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #a2a2a2;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			div.ti input:hover{border: solid 1px #ffdb30 !important;}
+
+div.rh {
+	color:#ffdb30;
+	font-weight: bolder;
+	width: 155px;
+	padding: 7px 10px 7px 10px;
+	margin: 0px -1px 0px 20px;
+	border: 1px solid #a2a2a2;
+	border-bottom: 1px solid #ffdb30;
+	background-image: url(image/cssimage/td1.png);
+-webkit-border-top-left-radius: 4px;
+-moz-border-radius-topleft: 4px;
+border-top-left-radius: 4px;
+	}
+	
+div.r {
+	color:#fff;
+	width: 155px;
+	padding: 10px 10px 10px 10px;
+	margin: 0px -1px 20px 20px;
+	border: 1px solid #a2a2a2;
+	border-top:0;
+	background-image: url(image/cssimage/tseda.png);
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-left-radius: 4px;
+	}	
+	
+	div.r li{list-style: none;}
+	
+/* ++++++++++++++++++++ Tlacítka a formulaøe ++++++++++++++++++++ */	
+
+.ok4 {
+	margin: 7px 2px 5px 2px !important;
+	padding: 3px 5px 3px 5px !important;
+	width: auto !important;
+	background-color: transparent;
+	background-image: url(image/cssimage/td1.png) !important;
+	background-repeat: repeat !important;
+	font-size: 11px !important;
+	color: #a2a2a2;	
+	text-decoration: none;
+	font-weight: bold !important;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #a2a2a2;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+		.ok4:hover {color:#ffdb30; border:#ffdb30 1px solid;}
+		
+/* ++++++++++++++++++++ Formátování textu ++++++++++++++++++++ */	
+h1 {
+	font-size: 1.5em;
+	font-stretch: wider;
+	font-weight: bold;
+	color: #ff8c00;
+	padding: 5px 0 5px 0;
+	margin: 15px 0 0 0;
+	text-decoration: none;
+	border-bottom: 1px solid #ffdb30;
+	}
+		
+h2 {
+	font-size: 1.3em;
+	font-stretch: wider;
+	font-weight: bold;
+	color: #ffdb30;
+	padding: 5px 0 5px 0;
+	margin: 10px 0 0 0;
+	text-decoration: none;
+	}	
+	
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #ffdb30;
+	padding: 5px 0 5px 0;
+	margin:0px;
+	text-decoration: none;
+	}	
+	
+h5 {
+	font-size: 0.7em !important;
+	font-weight: normal !important;
+	text-decoration: none !important;
+	}	
+	
+p { padding-bottom:5px; margin:0px; font-weight: normal;	}	
+a { text-decoration:none; padding-bottom:5px; margin:0px; color:#ffdb30;	}		
+	a:hover{text-decoration:underline;}
+
+a.emperor { text-decoration:none; margin:0px; color:#da70d6;	}		
+	a.emperor:hover{text-decoration:underline;}	
+
+a.regent { text-decoration:none; margin:0px; color:#da70d6;	}		
+	a.regent:hover{text-decoration:underline;}	
+	
+a.duce { text-decoration:none;  margin:0px; color:#ff0000;	}		
+	a.duce:hover{text-decoration:underline;}	
+	
+a.deputy { text-decoration:none; margin:0px; color:#40e0d0;	}		
+	a.deputy:hover{text-decoration:underline;}	
+	
+a.diplomat { text-decoration:none; margin:0px; color:#fffafa;	}		
+	a.diplomat:hover{text-decoration:underline;}	
+	
+a.general { text-decoration:none; margin:0px; color: 	#6b8e23;	}		
+	a.general:hover{text-decoration:underline;}	
+	
+a.mentat { text-decoration:none; margin:0px; color:#9acd32;	}		
+	a.mentat:hover{text-decoration:underline;}	
+	
+a.guverner { text-decoration:none; margin:0px; color:	#ff4500;	}		
+	a.guverner:hover{text-decoration:underline;}	
+
+.zelena{
+	color: #7cfc00;
+}
+
+.cervena{
+	color: #ff0000;
+}
+
+.oranzova{
+	color: #ffd700;
+}
+
+/* ++++++++++++++++++++ Formátování obrázkù ++++++++++++++++++++ */	
+
+img.screen {
+	width: 155px;
+	height: auto;
+	margin: 2px;
+	border: solid 1px #696969;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	}
+	
+
+/* ++++++++++++++++++++ Table ++++++++++++++++++++ */	
+
+
+table.tab {
+	width: 100%;
+	border: 0;
+}
+		td.no{
+			border: none !important;
+			background: transparent !important;
+			background-image: none !important;
+		}	
+		
+		table.tab th{
+		padding: 7px 10px 7px 15px;
+		text-shadow: 0.1em 0.1em #000 !important;
+		text-align: center;
+		color: #ffdb30;
+		vertical-align: baseline;
+		background-image: url(image/cssimage/td1.png);
+		border: solid 1px #696969;
+		border-bottom: solid 1px #ffdb30;
+		-webkit-border-top-left-radius: 3px;
+		-webkit-border-top-right-radius: 3px;
+		-moz-border-radius-topleft: 3px;
+		-moz-border-radius-topright: 3px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		}
+		table.tab li{
+		list-style: none;
+		margin-bottom: 5px;
+		}	
+		table.tab input{
+			margin: 7px 2px 5px 2px;
+			padding: 3px 5px 3px 25px;
+			width:100px;
+			font-size: 11px !important;
+			color: #ffdb30;
+			vertical-align: middle;
+			background: transparent;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #696969;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			table.tab input:hover{border: solid 1px #ffdb30 !important;}
+		
+		table.tab select{
+			margin: 7px 2px 5px 2px;
+			padding: 2px 5px 2px 25px;
+			width:100px;
+			font-size: 11px !important;
+			color: #ffdb30;
+			vertical-align: middle;
+			background-color: #292929;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #696969;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			table.tab select:hover{border: solid 1px #ffdb30 !important;}
+			
+		table.tab td{
+			padding: 15px;
+			background-image: url(image/cssimage/tseda.png);
+			text-align: justify;
+			font-size: 1.0 em;
+			border: 1px solid #696969;
+			vertical-align: top;
+			-webkit-border-bottom-right-radius: 3px;
+						-webkit-border-bottom-left-radius: 3px;
+						-moz-border-radius-bottomright: 3px;
+						-moz-border-radius-bottomleft: 3px;
+						border-bottom-right-radius: 3px;
+						border-bottom-left-radius: 3px;"
+		}
+		
+		table.tab textarea{
+			padding: none;
+			margin: none;
+			background: transparent;
+			color: #fff;
+			text-align: justify;
+			font-size: 1.0 em;
+			border: none;
+			vertical-align: top;
+			width: 676px;
+			max-width:676;
+			height: 100px;
+		}

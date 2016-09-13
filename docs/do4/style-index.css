@@ -1,0 +1,363 @@
+body {
+	color:#fff;
+	background-color:#000; 
+	background-image: url(image/cssimage/bg.jpg);
+	font-family: Calibri, Arial, Verdana;
+	font-size: 13px;
+	text-align: justify;
+	text-shadow: 0.05em 0.05em #000 !important;
+	}
+	
+/* ++++++++++++++++++++ Hlavní tìlo webu ++++++++++++++++++++ */
+
+#body_wrapper {
+  width: 800px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#body_container {
+	position: relative;
+	top: -280px;
+	margin: 0px auto; 
+	background-image: url(image/cssimage/tseda.png);
+	border: solid 1px #a2a2a2;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#body_container_b {
+	width: 800px;
+	min-width:500px;
+}
+
+/* ++++++++++++++++++++ Tlacítka a formulaøe ++++++++++++++++++++ */	
+
+.ok5 {
+	float: left;
+	margin: 7px 2px 5px 2px !important;
+	padding: 3px 5px 3px 5px !important;
+	width: auto !important;
+	background-color: transparent;
+	background-image: url(image/cssimage/td1.png) !important;
+	font-size: 11px !important;
+	color: #a2a2a2;	
+	text-decoration: none !important;
+	font-weight: bold !important;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #a2a2a2;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+		.ok5:hover {color:#ffdb30; border:#ffdb30 1px solid; text-decoration: none !important;}
+	
+.ok6 {
+	margin: 7px 2px 5px 2px !important;
+	padding: 3px 5px 3px 5px !important;
+	width: auto !important;
+	background-color: transparent;
+	background-image: url(image/cssimage/td1.png) !important;
+	font-size: 11px !important;
+	color: #a2a2a2;	
+	text-decoration: none;
+	font-weight: bold !important;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #a2a2a2;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+		.ok6:hover {color:#ffdb30; border:#ffdb30 1px solid;}
+		
+/* ++++++++++++++++++++ Formátování textu ++++++++++++++++++++ */	
+h1 {
+	font-size: 1.5em;
+	font-stretch: wider;
+	font-weight: bold;
+	color: #ff8c00;
+	padding: 5px 0 5px 0;
+	margin: 15px 0 0 0;
+	text-decoration: none;
+	border-bottom: 1px solid #ffdb30;
+	}
+		
+h2 {
+	font-size: 1.3em;
+	font-stretch: wider;
+	font-weight: bold;
+	color: #ffdb30;
+	padding: 5px 0 5px 0;
+	margin: 10px 0 10px 0;
+	text-decoration: none;
+	text-align: center;
+	}	
+	
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #ffdb30;
+	padding: 5px 0 5px 0;
+	margin: 10px 0 5px 0;
+	text-decoration: none;
+	}	
+	
+h5 {
+	font-size: 0.7em !important;
+	font-weight: normal !important;
+	text-decoration: none !important;
+	}	
+	
+p { padding-bottom:5px; margin:0px; font-weight: normal;	}	
+a { text-decoration:none; padding-bottom:5px; margin:0px; color:#ffdb30;	}		
+	a:hover{text-decoration:underline;}
+	
+a.no { text-decoration:none; padding-bottom:5px; margin:0px; color:#ffdb30;	}		
+	a.no:hover{text-decoration:none;}
+
+a.emperor { text-decoration:none; margin:0px; color:#da70d6;	}		
+	a.emperor:hover{text-decoration:underline;}	
+
+a.regent { text-decoration:none; margin:0px; color:#da70d6;	}		
+	a.regent:hover{text-decoration:underline;}	
+	
+a.duce { text-decoration:none;  margin:0px; color:#ff0000;	}		
+	a.duce:hover{text-decoration:underline;}	
+	
+a.deputy { text-decoration:none; margin:0px; color:#40e0d0;	}		
+	a.deputy:hover{text-decoration:underline;}	
+	
+a.diplomat { text-decoration:none; margin:0px; color:#fffafa;	}		
+	a.diplomat:hover{text-decoration:underline;}	
+	
+a.general { text-decoration:none; margin:0px; color: 	#6b8e23;	}		
+	a.general:hover{text-decoration:underline;}	
+	
+a.mentat { text-decoration:none; margin:0px; color:#9acd32;	}		
+	a.mentat:hover{text-decoration:underline;}	
+	
+a.guverner { text-decoration:none; margin:0px; color:	#ff4500;	}		
+	a.guverner:hover{text-decoration:underline;}	
+
+.zelena{
+	color: #7cfc00;
+}
+
+.cervena{
+	color: #ff0000;
+}
+
+.oranzova{
+	color: #ffd700;
+}
+
+
+/* ++++++++++++++++++++ Lišta ++++++++++++++++++++ */	
+
+div.ti2 {
+	margin: 0 5% 0 5%;
+	width: 90%;
+	z-index: 2 !important;
+	color: #ffdb30;
+	font-weight: bolder;
+}
+
+div.ti {
+	width: 100%;
+	margin:0;
+	font-size: 12px;
+	text-shadow: 0.1em 0.1em #000 !important;
+	padding: 1px 0px 1px 0px;
+	text-align: right;
+	vertical-align: baseline;
+	background-image: url(image/cssimage/td1.png);
+	border: 0;
+	border-bottom: solid 1px #696969;
+	border-top: solid 1px #696969;
+	z-index: 2 !important;
+}
+		div.ti li{
+		list-style: none;
+		}	
+		div.ti input{
+			margin: 7px 2px 5px 2px;
+			padding: 3px 5px 3px 25px;
+			width:100px;
+			font-size: 11px;
+			color: #ffdb30;
+			vertical-align: middle;
+			background: transparent;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #696969;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			div.ti input:hover{border: solid 1px #ffdb30 !important;}
+		
+		div.ti select{
+			margin: 7px 2px 5px 2px;
+			padding: 2px 5px 2px 25px;
+			width:100px;
+			font-size: 11px !important;
+			color: #ffdb30;
+			vertical-align: middle;
+			background-color: #292929;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #696969;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			table.ti select:hover{border: solid 1px #ffdb30 !important;}
+			
+		div.ti td{
+			padding: 5px;
+			background-image: url(image/cssimage/tseda.png);
+			text-align: justify;
+			font-size: 1.0 em;
+			border: 1px solid #696969;
+			vertical-align: top;
+		}
+		
+		div.ti textarea{
+			padding: none;
+			margin: none;
+			background: transparent;
+			color: #fff;
+			text-align: justify;
+			font-size: 1.0 em;
+			border: none;
+			vertical-align: top;
+			width: 676px;
+			max-width:676;
+			height: 100px;
+		}
+
+	
+/* ++++++++++++++++++++ Text - tab ++++++++++++++++++++ */	
+
+
+table.tab {
+	width: 100%;
+	border: 0;
+	font-size: 13px;
+	margin-top: -330px;
+	z-index: 2 !important;
+}
+		td.no{
+			border: none !important;
+			background: transparent !important;
+			background-image: none !important;
+		}	
+		
+		table.tab th{
+		padding: 5px 10px 1px 10px;
+		text-shadow: 0.1em 0.1em #000 !important;
+		text-align: center;
+		color: #ffdb30;
+		font-size: 1.2em;
+		vertical-align: baseline;
+		background-image: url(image/cssimage/td1.png);
+		border: solid 1px #696969;
+		border-bottom: solid 1px #ffdb30;
+		-webkit-border-top-left-radius: 3px;
+		-webkit-border-top-right-radius: 3px;
+		-moz-border-radius-topleft: 3px;
+		-moz-border-radius-topright: 3px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		}
+		table.tab li{
+		list-style: none;
+		margin-bottom: 5px;
+		}	
+		table.tab input{
+			margin: 7px 2px 5px 2px;
+			padding: 3px 5px 3px 25px;
+			width:100px;
+			font-size: 11px !important;
+			color: #ffdb30;
+			vertical-align: middle;
+			background: transparent;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #696969;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			table.tab input:hover{border: solid 1px #ffdb30 !important;}
+		
+		table.tab select{
+			margin: 7px 2px 5px 2px;
+			padding: 2px 5px 2px 25px;
+			width:100px;
+			font-size: 11px !important;
+			color: #ffdb30;
+			vertical-align: middle;
+			background-color: #292929;
+			background-position: left;
+			background-repeat: no-repeat;
+			border: solid 1px #696969;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+		}
+			table.tab select:hover{border: solid 1px #ffdb30 !important;}
+			
+		table.tab td{
+			padding: 15px;
+			background-image: url(image/cssimage/tseda.png);
+			text-align: justify;
+			font-size: 1.0 em;
+			border: 1px solid #696969;
+			vertical-align: top;
+			-webkit-border-bottom-right-radius: 3px;
+						-webkit-border-bottom-left-radius: 3px;
+						-moz-border-radius-bottomright: 3px;
+						-moz-border-radius-bottomleft: 3px;
+						border-bottom-right-radius: 3px;
+						border-bottom-left-radius: 3px;"
+		}
+		
+		table.tab textarea{
+			padding: none;
+			margin: none;
+			background: transparent;
+			color: #fff;
+			text-align: justify;
+			font-size: 1.0 em;
+			border: none;
+			vertical-align: top;
+			width: 676px;
+			max-width:676;
+			height: 100px;
+		}
+
+		
+div.planet {
+	background-image: url(image/cssimage/arrakis.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	z-index: 1;
+	width: 800px;
+	height: 300px;
+	border: 0;
+}
+
+img.screen {
+	width: 180px;
+	height: 112.5px;
+	margin: 2px;
+	border: solid 1px #696969;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	}

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @house.type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @house.name %>
+</p>
+
+<p>
+  <strong>Solar:</strong>
+  <%= @house.solar %>
+</p>
+
+<p>
+  <strong>Melange:</strong>
+  <%= @house.melange %>
+</p>
+
+<p>
+  <strong>Research:</strong>
+  <%= @house.research %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @house.material %>
+</p>
+
+<p>
+  <strong>Influence:</strong>
+  <%= @house.influence %>
+</p>
+
+<p>
+  <strong>Noticeboard:</strong>
+  <%= @house.noticeboard %>
+</p>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>
