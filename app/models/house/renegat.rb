@@ -18,15 +18,6 @@
 #  playable        :boolean          default(FALSE)
 #
 
-FactoryGirl.define do
-  factory :house do
-    type ""
-    name "MyString"
-    solar 1
-    melange "9.99"
-    research 1
-    material "9.99"
-    influence 1
-    noticeboard "MyText"
-  end
+class House::Renegat < House
+
 end

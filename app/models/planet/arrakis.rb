@@ -18,13 +18,14 @@
 #  updated_at       :datetime         not null
 #
 
-FactoryGirl.define do
-  factory :planet do
-    name "MyString"
-    system_id 1
-    position 1
-    discovered_at "2016-09-14 00:10:22"
-    house_id 1
-    available_to_all false
+class Planet::Arrakis < Planet
+  def self.vytvor
+    Planet::Arrakis.create(name: 'Arrakis',
+                        system_id: System.where(name: 'Mu Draconis').first.id,
+                        position: 1,
+                        house_id: House::Empire.first.id,
+                        available_to_all: false,
+                        fields_count: 1
+    )
   end
 end

@@ -8,7 +8,7 @@ class CreatePlanets < ActiveRecord::Migration[5.0]
       t.integer :house_id
       t.boolean :available_to_all
 
-      t.integer :fields, default: 0
+      t.integer :fields_count, default: 0
       t.decimal :population_bonus, precision: 12, scale: 4, default: 0.0
       t.decimal :material_bonus, precision: 12, scale: 4, default: 0.0
       t.decimal :solar_bonus, precision: 12, scale: 4, default: 0.0

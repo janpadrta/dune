@@ -18,13 +18,14 @@
 #  updated_at       :datetime         not null
 #
 
-FactoryGirl.define do
-  factory :planet do
-    name "MyString"
-    system_id 1
-    position 1
-    discovered_at "2016-09-14 00:10:22"
-    house_id 1
-    available_to_all false
+class Planet::Caladan < Planet
+  def self.vytvor
+    Planet::Caladan.create(name: 'Caladan',
+                        system_id: System.where(name: 'Alpha Centauri A').first.id,
+                        position: 3,
+                        house_id: House::Atreides.first.id,
+                        available_to_all: false,
+                        fields_count: 0
+    )
   end
 end

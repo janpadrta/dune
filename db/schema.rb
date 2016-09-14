@@ -10,29 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913215412) do
+ActiveRecord::Schema.define(version: 20160913221654) do
 
-  create_table "discoverables", force: :cascade do |t|
+  create_table "fields", force: :cascade do |t|
     t.string   "name"
-    t.integer  "system_id"
-    t.integer  "position"
-    t.boolean  "discovered", default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "user_id"
+    t.integer  "planet_id"
+    t.integer  "pos_x"
+    t.integer  "pos_y"
+    t.decimal  "population", precision: 12, scale: 4, default: "0.0"
+    t.decimal  "material",   precision: 12, scale: 4, default: "0.0"
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+    t.index ["planet_id"], name: "index_fields_on_planet_id"
+    t.index ["user_id"], name: "index_fields_on_user_id"
   end
 
   create_table "houses", force: :cascade do |t|
     t.string   "type"
-    t.string   "name",        default: ""
-    t.integer  "solar",       default: 50000
-    t.decimal  "melange",     default: "5.0"
-    t.integer  "research",    default: 2000
-    t.decimal  "material",    default: "5000.0"
-    t.integer  "influence",   default: 0
-    t.text     "noticeboard", default: ""
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.boolean  "playable",    default: false
+    t.string   "name",                                     default: ""
+    t.string   "leader",                                   default: ""
+    t.integer  "solar",                                    default: 50000
+    t.decimal  "melange",         precision: 12, scale: 4, default: "5.0"
+    t.integer  "research",                                 default: 2000
+    t.decimal  "material",        precision: 12, scale: 4, default: "5000.0"
+    t.integer  "influence",                                default: 0
+    t.text     "noticeboard",                              default: ""
+    t.decimal  "melange_percent", precision: 12, scale: 4, default: "5.0"
+    t.datetime "created_at",                                                  null: false
+    t.datetime "updated_at",                                                  null: false
+    t.boolean  "playable",                                 default: false
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "system_id"
+    t.integer  "position"
+    t.datetime "discovered_at"
+    t.integer  "house_id"
+    t.boolean  "available_to_all"
+    t.integer  "fields_count",                              default: 0
+    t.decimal  "population_bonus", precision: 12, scale: 4, default: "0.0"
+    t.decimal  "material_bonus",   precision: 12, scale: 4, default: "0.0"
+    t.decimal  "solar_bonus",      precision: 12, scale: 4, default: "0.0"
+    t.decimal  "exp_bonus",        precision: 12, scale: 4, default: "0.0"
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
+    t.index ["house_id"], name: "index_planets_on_house_id"
+    t.index ["name"], name: "index_planets_on_name"
+    t.index ["system_id"], name: "index_planets_on_system_id"
   end
 
   create_table "systems", force: :cascade do |t|

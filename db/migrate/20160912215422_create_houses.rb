@@ -3,6 +3,7 @@ class CreateHouses < ActiveRecord::Migration[5.0]
     create_table :houses do |t|
       t.string :type
       t.string :name, default: ''
+      t.string :leader, default: ''
       t.integer :solar, default: 50000
       t.decimal :melange, precision: 12, scale: 4, default: 5.0
       t.integer :research, default: 2000

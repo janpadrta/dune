@@ -18,13 +18,18 @@
 #  updated_at       :datetime         not null
 #
 
-FactoryGirl.define do
-  factory :planet do
-    name "MyString"
-    system_id 1
-    position 1
-    discovered_at "2016-09-14 00:10:22"
-    house_id 1
-    available_to_all false
+class Planet::Titania < Planet
+  def self.vytvor
+    Planet::Titania.create(name: 'Titania',
+                        system_id: System.where(name: 'Titania').first.id,
+                        position: 1,
+                        house_id: House::Titan.first.id,
+                        available_to_all: false,
+                        fields_count: 0,
+                        population_bonus: 100,
+                        material_bonus: 50,
+                        solar_bonus: 50,
+                        exp_bonus: 50
+    )
   end
 end
