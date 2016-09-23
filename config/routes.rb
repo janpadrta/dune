@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :buildings
   resources :fields
   resources :planets
   resources :houses

@@ -28,4 +28,10 @@ class Planet::Arrakis < Planet
                         fields_count: 1
     )
   end
+
+  def fields_creation
+    arr = Field.create(planet_id: self.id, name: 'Arrakis', population: 250000, material: 50000)
+    Estate.create(field_id: arr.id, building_id: Building::Melange::Arraken.first.id, number: 1)
+    Estate.create(field_id: arr.id, building_id: Building::Melange::Harvester.first.id, number: 15)
+  end
 end

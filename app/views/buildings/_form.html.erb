@@ -1,0 +1,82 @@
+<%= form_for(building) do |f| %>
+  <% if building.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(building.errors.count, "error") %> prohibited this building from being saved:</h2>
+
+      <ul>
+      <% building.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :population_bonus %>
+    <%= f.text_field :population_bonus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :melange_bonus %>
+    <%= f.text_field :melange_bonus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :material_bonus %>
+    <%= f.text_field :material_bonus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :solar_bonus %>
+    <%= f.text_field :solar_bonus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exp_bonus %>
+    <%= f.text_field :exp_bonus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :population_cost %>
+    <%= f.text_field :population_cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :melange_cost %>
+    <%= f.text_field :melange_cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :material_cost %>
+    <%= f.text_field :material_cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :solar_cost %>
+    <%= f.text_field :solar_cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exp_cost %>
+    <%= f.text_field :exp_cost %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

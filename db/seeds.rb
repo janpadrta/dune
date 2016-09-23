@@ -18,6 +18,24 @@ cor = House::Corrino.create(name: 'Corrino', playable: true, leader: 'Padishah')
 
 p 'House done'
 
+Building::Population::Town.create(name: "Město", description: "Města slouží k ubytování vaší populace.", population_bonus: 20.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 35.0, solar_cost: 30.0, exp_cost: 0.0)
+Building::Population::City.create(name: "Velkoměsto", description: "Velkoměsta slouží k ubytování vaší populace.", population_bonus: 30.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 36.0, solar_cost: 32.0, exp_cost: 0.0)
+Building::Population::Metropolis.create(name: "Metropole", description: "Metropole slouží k ubytování vaší populace.", population_bonus: 50.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 5.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 1.0, material_cost: 37.0, solar_cost: 33.0, exp_cost: 0.0)
+Building::Solar::Market.create(name: "Trh", description: "Trhy slouží k produkci solárů, což je hlavní platidlo v Impériu. ", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 10.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 25.0, solar_cost: 20.0, exp_cost: 0.0)
+Building::Solar::Bank.create(name: "Banka", description: "Banka slouží k produkci solárů, což je hlavní platidlo v Impériu. ", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 14.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 26.0, solar_cost: 22.0, exp_cost: 0.0)
+Building::Solar::StockExchange.create(name: "Burza", description: "Burza slouží k produkci solárů, což je hlavní platidlo v Impériu. ", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 18.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 27.0, solar_cost: 23.0, exp_cost: 0.0)
+Building::Material::Mine.create(name: "Důl", description: "Doly slouží k těžbě vzácných rud, které jsou dále zpracovány na materiál.", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 10.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 20.0, solar_cost: 21.0, exp_cost: 0.0)
+Building::Material::Borehole.create(name: "Vrt", description: "Vrt slouží k těžbě vzácných rud, které jsou dále zpracovány na materiál.", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 14.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 21.0, solar_cost: 22.0, exp_cost: 0.0)
+Building::Material::DeepCore.create(name: "Hlubinná těžba", description: "Hlubinna tezba slouží k těžbě vzácných rud, které jsou dále zpracovány na materiál.", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 18.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 22.0, solar_cost: 23.0, exp_cost: 0.0)
+Building::Research::Laboratory.create(name: "Laboratoř", description: "Laboratoře jsou určeny k produkci zkušeností (expů), ty jsou dále využity pro výzkum technologii.", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 10.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 40.0, solar_cost: 30.0, exp_cost: 0.0)
+Building::Research::Univerzity.create(name: "Univerzita", description: "Univerzity jsou určeny k produkci zkušeností (expů), ty jsou dále využity pro výzkum technologii.", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 14.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 42.0, solar_cost: 31.0, exp_cost: 0.0)
+Building::Research::TempleOfScience.create(name: "Chrám vědy", description: "Chramy vedy jsou určeny k produkci zkušeností (expů), ty jsou dále využity pro výzkum technologii.", population_bonus: 0.0, melange_bonus: 0.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 18.0, population_cost: 200.0, melange_cost: 0.0, material_cost: 44.0, solar_cost: 32.0, exp_cost: 0.0)
+
+Building::Melange::Harvester.create(name: "Továrna na koření", description: "Produkuje koreni.", population_bonus: 0.0, melange_bonus: 100.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 20.0, melange_cost: 3.0, material_cost: 50.0, solar_cost: 100.0, exp_cost: 0.0)
+Building::Melange::Arraken.create(name: "Arraken", description: "Sídelní město, astroport.", population_bonus: 10.0, melange_bonus: 300.0, material_bonus: 0.0, solar_bonus: 0.0, exp_bonus: 0.0, population_cost: 0.0, melange_cost: 0.0, material_cost: 0.0, solar_cost: 0.0, exp_cost: 0.0)
+
+puts 'budovy done'
+
 System.create(name: 'Aclin Neutra')
 System.create(name: 'Delphinus')
 System.create(name: 'Anbus')

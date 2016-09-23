@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913221654) do
+ActiveRecord::Schema.define(version: 20160923212649) do
+
+  create_table "buildings", force: :cascade do |t|
+    t.string   "type"
+    t.string   "name",                                                      null: false
+    t.string   "description",                               default: ""
+    t.decimal  "population_bonus", precision: 12, scale: 4, default: "0.0"
+    t.decimal  "melange_bonus",    precision: 12, scale: 4, default: "0.0"
+    t.decimal  "material_bonus",   precision: 12, scale: 4, default: "0.0"
+    t.decimal  "solar_bonus",      precision: 12, scale: 4, default: "0.0"
+    t.decimal  "exp_bonus",        precision: 12, scale: 4, default: "0.0"
+    t.decimal  "population_cost",  precision: 12, scale: 4, default: "0.0"
+    t.decimal  "melange_cost",     precision: 12, scale: 4, default: "0.0"
+    t.decimal  "material_cost",    precision: 12, scale: 4, default: "0.0"
+    t.decimal  "solar_cost",       precision: 12, scale: 4, default: "0.0"
+    t.decimal  "exp_cost",         precision: 12, scale: 4, default: "0.0"
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
+  end
+
+  create_table "estates", force: :cascade do |t|
+    t.integer  "building_id"
+    t.integer  "field_id"
+    t.integer  "number",      default: 1
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "fields", force: :cascade do |t|
     t.string   "name"

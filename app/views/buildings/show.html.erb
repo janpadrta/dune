@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @building.type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @building.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @building.description %>
+</p>
+
+<p>
+  <strong>Population bonus:</strong>
+  <%= @building.population_bonus %>
+</p>
+
+<p>
+  <strong>Melange bonus:</strong>
+  <%= @building.melange_bonus %>
+</p>
+
+<p>
+  <strong>Material bonus:</strong>
+  <%= @building.material_bonus %>
+</p>
+
+<p>
+  <strong>Solar bonus:</strong>
+  <%= @building.solar_bonus %>
+</p>
+
+<p>
+  <strong>Exp bonus:</strong>
+  <%= @building.exp_bonus %>
+</p>
+
+<p>
+  <strong>Population cost:</strong>
+  <%= @building.population_cost %>
+</p>
+
+<p>
+  <strong>Melange cost:</strong>
+  <%= @building.melange_cost %>
+</p>
+
+<p>
+  <strong>Material cost:</strong>
+  <%= @building.material_cost %>
+</p>
+
+<p>
+  <strong>Solar cost:</strong>
+  <%= @building.solar_cost %>
+</p>
+
+<p>
+  <strong>Exp cost:</strong>
+  <%= @building.exp_cost %>
+</p>
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>

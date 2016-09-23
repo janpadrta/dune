@@ -17,4 +17,14 @@
 class Field < ApplicationRecord
   belongs_to :user
   belongs_to :planet
+
+  has_many :estates
+  has_many :buildings, through: :estates
+
+  after_create :zalozeni
+
+  def zalozeni
+
+  end
+
 end
