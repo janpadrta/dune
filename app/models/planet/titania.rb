@@ -32,4 +32,8 @@ class Planet::Titania < Planet
                         exp_bonus: 50
     )
   end
+
+  def fields_creation
+
+  end
 end

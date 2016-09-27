@@ -353,3 +353,16 @@ Planet.vytvor('Yandin IX', 'Yadin', 9)
 Planet::Titania.vytvor
 
 p 'Planet done'
+
+User.create(:username => 'Norma_Cenva', :name => 'Norma Cenva', :email => 'normacenva@spojka.vg', :house_id => titan.id, :password => 'doktoros', :password_confirmation => 'doktoros', :admin => true)
+User.create(:username => 'Doktor', :name => 'Doktor', :email => 'admin@dunaonline.cz', :house_id => titan.id, :password => 'Abcd1234', :password_confirmation => 'Abcd1234', :admin => true)
+User.create(:username => 'Gilbertus_Albans', :name => 'Gilbertus Albans', :email => 'administr@dunaonline.cz', :house_id => titan.id, :password => 'Abcd1234', :password_confirmation => 'Abcd1234', :admin => true)
+# User.create(:username => 'Simi', :name => 'Simi', :email => 'administrator@dunaonline.cz', :house_id => titan.id, :password => 'Abcd1234', :password_confirmation => 'Abcd1234', :admin => true)
+# User.create(:username => 'minohimself', :name => 'minohimself', :email => 'adminhimself@dunaonline.cz', :house_id => titan.id, :password => 'Abcd1234', :password_confirmation => 'Abcd1234', :admin => true)
+puts 'User done'
+
+norma = User.find_by_username('Norma_Cenva')
+doktor = User.find_by_username('Doktor')
+gilbertus = User.find_by_username('Gilbertus_Albans')
+# simi = User.find_by_username('Simi')
+# mino = User.find_by_username('minohimself')

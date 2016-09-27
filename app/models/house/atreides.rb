@@ -20,4 +20,7 @@
 
 class House::Atreides < House
 
+  def self.model_name
+    House.model_name
+  end
 end

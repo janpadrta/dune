@@ -24,7 +24,11 @@ class Field < ApplicationRecord
   after_create :zalozeni
 
   def zalozeni
-
+    return true if planet.is_a? Planet::Arrakis
+    self.update_attributes(population: 20000, material: 5000.0)
+    Estate.create(field_id: self.id, building_id: Building::Population::Town.first.id, number: 2)
+    Estate.create(field_id: self.id, building_id: Building::Solar::Market.first.id, number: 1)
+    Estate.create(field_id: self.id, building_id: Building::Material::Mine.first.id, number: 1)
   end
 
 end

@@ -28,4 +28,8 @@ class Planet::SalusaSecundus < Planet
                         fields_count: 0
     )
   end
+
+  def fields_creation
+
+  end
 end

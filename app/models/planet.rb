@@ -62,15 +62,15 @@ class Planet < ApplicationRecord
       bonuses[k] = [n = rand(100), p = rand(100)]
       negative += n
       positive += p
-    }.each { |k, v|
+    }.each { |ke, va|
       # vypocitame pomerove procenta pro kazdou polozku jak zaporna tak kladna (pokud by nahodnou vsechna vysla 0 obejdeme deleni nulou)
-      n_percent = (negative == 0 ? 0 : (v[0].to_f / negative.to_f) * (Bonus::TYPES.keys.length * Bonus::PER_TYPE))
-      p_percent = (positive == 0 ? 0 : (v[1].to_f / positive.to_f) * (Bonus::TYPES.keys.length * Bonus::PER_TYPE))
+      n_percent = (negative == 0 ? 0 : (va[0].to_f / negative.to_f) * (Bonus::TYPES.keys.length * Bonus::PER_TYPE))
+      p_percent = (positive == 0 ? 0 : (va[1].to_f / positive.to_f) * (Bonus::TYPES.keys.length * Bonus::PER_TYPE))
       # zjistime jestli hodnota bonusu neprevysuje maximalni povolenou hodnotu a pokud ano nastavime ji na maximum a nasledne zapornou odecteme od kladne
       bonus = (p_percent > Bonus::MAX_PER_TYPE ? Bonus::MAX_PER_TYPE : p_percent) - (n_percent > Bonus::MIN_PER_TYPE ? Bonus::MIN_PER_TYPE : n_percent)
       # procenta bonusu prevedeme na realne hodnoty bonusu definovane v konstantach a prevedeme na procentualni hodnotu
       # mozna by nebylo od veci to prevest na int, protoze napriklad lena jsou jen cela cisla, da se poresit prepisem metody, viz. nize
-      bonuses[k] = ((Bonus::TYPES[k] / 100.0) * bonus * 100.0).round
+      bonuses[ke] = ((Bonus::TYPES[ke] / 100.0) * bonus * 100.0).round
     }
 
     system_id = System.where(name: system).first.id
