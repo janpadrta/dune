@@ -28,6 +28,7 @@
 #  melange                :decimal(, )      default(0.5)
 #  research               :integer          default(250)
 #  influence              :integer          default(0)
+#  username               :string
 #
 
 describe User do

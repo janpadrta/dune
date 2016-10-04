@@ -1,0 +1,9 @@
+<div class="avatar">
+
+  <%= obrazek_budovy(current_user.house.name, "erb") %>
+  <li>Nick: <%= link_to current_user.nick, current_user, :class => current_user.barvicky, :title => current_user.barvicky %></li>
+  <li>Národ: <%= link_to current_user.house.name, current_user.house %></li>
+  <li>Vliv: <%= current_user.vliv %> </li>
+  <li>Lén: <%= current_user.fields.count %> </li>
+
+</div>

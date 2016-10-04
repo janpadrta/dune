@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Dune" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Dune" %>">
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-  </body>
+<head>
+  <title><%= content_for?(:title) ? yield(:title) : "dunaonline.cz" %></title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+  <%= yield(:head) %>
+</head>
+<body>
+
+<div id="body_wrapper">
+  <div class="planet"></div>
+  <div id="body_container">
+    <%= render 'layouts/lista' -%>
+
+    <div id="body_container_b">
+
+      <% if current_user -%>
+          <%= render 'layouts/hlavicka' -%>
+      <% else %>
+          <%= render 'layouts/hlavicka_login' -%>
+      <% end -%>
+
+      <div id="page_content">
+        <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+
+        <table>
+          <tr>
+            <td class="left">
+              <% if current_user -%>
+
+                  <% if current_user.admin? %>
+                      <%= render 'layouts/administration' %>
+                  <% end %>
+
+                  <%= render 'layouts/leve_pole' %>
+              <% else %>
+                  <%= render 'layouts/leve_pole_login' -%>
+              <% end %>
+            </td>
+
+            <td class="stred">
+              <% if current_user || params[:controller] == 'help' -%>
+                  <%= yield %>
+              <% else %>
+                  <%= render 'layouts/stred_login' -%>
+              <% end %>
+            </td>
+
+            <td class="prava">
+              <% if current_user -%>
+                  <%= render 'layouts/prave_pole' %>
+              <% else %>
+                  <%= render 'layouts/prave_pole_login' -%>
+              <% end %>
+            </td>
+
+          </tr>
+
+        </table>
+      </div>
+
+      <%= render 'layouts/paticka' %>
+    </div>
+  </div>
+</div>
+</body>
 </html>

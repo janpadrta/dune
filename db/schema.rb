@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924193431) do
+ActiveRecord::Schema.define(version: 20161004214052) do
 
   create_table "buildings", force: :cascade do |t|
     t.string   "type"
@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 20160924193431) do
     t.datetime "updated_at",                                          null: false
     t.index ["planet_id"], name: "index_fields_on_planet_id"
     t.index ["user_id"], name: "index_fields_on_user_id"
+  end
+
+  create_table "globals", force: :cascade do |t|
+    t.string   "setting",    null: false
+    t.boolean  "value"
+    t.date     "datum"
+    t.string   "slovo"
+    t.decimal  "cislo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "houses", force: :cascade do |t|

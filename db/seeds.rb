@@ -9,6 +9,13 @@
 # puts 'CREATED ADMIN USER: ' << user.email
 # Environment variables (ENV['...']) can be set in the file .env file.
 
+Global.create(setting: 'login', value: false)
+Global.create(setting: 'signup', value: false)
+Global.create(setting: 'start_veku', datum: Date.today)
+Global.create(setting: 'pristi_volby', datum: 1.week.from_now)
+
+p 'Global done'
+
 titan = House::Titan.create(name: 'Titans', playable: false, leader: 'The Oraculum of Time')
 empire = House::Empire.create(name: 'Empire', playable: false, leader: 'Emperor')
 rene = House::Renegat.create(name: 'Renegates', playable: false, leader: '')

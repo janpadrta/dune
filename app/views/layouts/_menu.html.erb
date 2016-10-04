@@ -1,0 +1,152 @@
+<div id='nava'>
+  <table id='nava2'>
+    <tr>
+      <td>
+        <ul class='menu'>
+          <li><a class='menukomunikace' title='Komunikace'></a>
+            <ul>
+              <li><%= link_to 'Doručená pošta [' + current_user.neprocteno_sprav.to_s + ']', '#' %>
+              <li><%= link_to 'Odeslaná pošta', '#' %>
+              <li><%= link_to 'Poslat poštu', '#' %>
+                <br>
+              -->
+              <li><%= link_to 'Národní Syselaad', '#' %></li>
+              <li><%= link_to 'Mezinárodní Syselaad', '#' %></li>
+              <% if current_user.pristup_do_is? %>
+                  <li><%= link_to 'Imperialní Syselaad', '#' %></li>
+              <% end %>
+              <% if current_user.pristup_do_ls? %>
+                  <li><%= link_to 'Landsraadní Syselaad', '#' %></li>
+              <% end %>
+              <!-- <li><a href='#'> Multifórum *</a>  -->
+              <li><%= link_to 'Systémový Syselaad', '#' %></li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+
+      <td>
+        <ul class='menu'>
+          <li><a class='menupolitika' title='Politika'></a>
+            <ul>
+
+              <!--<li><a href='#'> Mezinárodní diplomacie *</a>-->
+              <li><%= link_to 'Správa hráče a volby', '#' %>
+
+                <br>
+
+              <% if can? :sprava_rod, House %>
+                  <li><%= link_to 'Správa Velkorodu', '#' %>
+                  <li><%= link_to 'Národní databáze hráčů', '#' %></li>
+              <% else %>
+                  <li><%= link_to 'Velkorod', '#' %></li>
+              <% end %>
+
+              <% if can? :sprava, Imperium %>
+                  <li><%= link_to 'Správa Impéria', '#' %></li>
+              <% else %>
+                  <li><%= link_to 'Impérium', '#' %></li>
+              <% end %>
+              <li><%= link_to 'Produkce na Arrakis', '#' %>
+
+                <br>
+
+                <% if current_user.landsraad? || current_user.admin? %>
+                  <li><%= link_to 'Zasedání Landsraadu', '#' %></li>
+              <% else %>
+                  <li><%= link_to 'Landsraad', '#' %></li>
+              <% end %>
+
+              <% if current_user.emperor? || current_user.admin? %>
+                  <li><%= link_to 'Zákony na podepsání', '#' %></li>
+              <% end %>
+              <li><%= link_to 'Archiv Landsraadu', '#' %></li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+
+      <td>
+        <ul class='menu'>
+          <li><a class='menuvyzkum' title='Ekonomika a výzkum'></a>
+            <ul>
+              <li><%= link_to 'Statistika přepočtů', '#' %> </li>
+
+              <br>
+
+              <li><%= link_to ' Váš výzkum', '#' %></li>
+
+              <% if current_user.admin? || current_user.leader? || current_user.mentat? %>
+                  <li><%= link_to 'Národní výzkum', '#' %> </li>
+              <% end %>
+
+              <li><%= link_to ' Výroba a transport výrobků', '#' %></li>
+
+              <br>
+
+              <li><%= link_to ' Trh', '#' %></li>
+              <li><%= link_to ' Trh - Vaše nabídky', '#' %></li>
+
+            </ul>
+        </ul>
+      </td>
+
+      <td>
+        <ul class='menu'>
+          <li><a class='menuarmada' title='Armádní velitelství'></a>
+            <ul>
+              <% if current_user.has_kasaren %>
+                  <li><%= link_to 'Verbování jednotek', '#' %></li>
+              <% else %>
+                  <li>
+                    <%= link_to 'Nemate Kasarnu', '#' %>
+                  </li>
+              <% end %>
+
+              <% if current_user.planets_with_kosmodrom.first %>
+                  <li><%= link_to 'Verbování vesmirnych jednotek', '#' %></li>
+              <% else %>
+                  <li>
+                    <%= link_to 'Nemate Kosmodrom', '#' %>
+                  </li>
+              <% end %>
+              <li><%= link_to 'Rozmiestnenie armady', '#' %></li>
+              <li><%= link_to 'Rozmiestnenie Vesmirnej armady', '#' %></li>
+              <!--<li><a href='#'> Správa šablon jednotek *</a> -->
+              <li><a href='#'> Vyslat útok *</a>
+                <br>
+              <li><a href='#'> Imperiální statistika bojů *</a>
+            </ul>
+          </li>
+        </ul>
+      </td>
+
+      <td>
+        <ul class='menu'>
+          <li><a class='menugalaxy' title='Správa lén*'></a>
+            <ul>
+
+              <li><%= link_to 'Seznam vašich planet', fields_path %>
+              <li><%= link_to 'Seznam vašich lén ', '#' %>
+              <li><%= link_to 'Zástavba lén', '#' %>
+              <li><%= link_to 'Léna k osídlení', planets_path %>
+                <% if can? :sprava_rod, House %>
+                  <li><%= link_to 'Kolonizovat planetu', '#' %></li>
+              <% end %>
+              <br>
+              <li><%= link_to 'Imperialní kartografie', systems_path %></li>
+              <li><%= link_to 'Imperiální databáze hráčů', users_path %></li>
+              <li><%= link_to 'Imperiální databáze národů', houses_path %></li>
+              <% if current_user.admin? || current_user.leader? || current_user.mentat? %>
+                  <br>
+                  <li><%= link_to 'Národní databáze hráčů', current_user.house %></li>
+                  <li><%= link_to 'Národní databáze událostí', '#' %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </td>
+
+    </tr>
+  </table>
+</div>

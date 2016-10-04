@@ -1,0 +1,37 @@
+<!--- volba imperátora -->
+
+<% if true#Imperium.volba_imperatora? %>
+
+    <div class="la" style="background-image: url(/assets/imghra/vobyimperatora.png) !important">
+      <%= link_to "Probíhaji volby Imperátora!", '#' %>
+    </div>
+<% end %>
+
+<!--- POŠTA -->
+
+<div class="la">
+  <%= link_to "Nepřečtená pošta [" + 'x' + "]", '#' %>
+</div>
+
+<!--- UDÁLOST LÉNA -->
+
+<%# field, planet = current_user.zobraz_udalost %>
+<%# field.each do |f| %>
+    <!--<div class="la field_event" style="background-image: url(/assets/imghra/udalost.png) !important">-->
+
+      <%#= f[0] %>
+
+      Více informací najdete <%#= link_to "zde.", udalost_path(:id => f[1], :typ => "L") %>
+    <!--</div>-->
+<%# end %>
+
+<!--- UDÁLOST PLANÉTY -->
+<%# planet.each do |p| %>
+    <!--<div class="la field_event">-->
+      <%#= p[0] %>
+      <%#= link_to "udalost", '#' %>
+    <!--</div>-->
+<%# end %>
+
+<%= render 'layouts/narodni_nastenka' %>
+<%= render 'layouts/malorodni_nastenka' %>
