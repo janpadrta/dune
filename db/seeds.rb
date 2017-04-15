@@ -18,7 +18,7 @@ p 'Global done'
 
 titan = House::Titan.create(name: 'Titans', playable: false, leader: 'The Oraculum of Time')
 empire = House::Empire.create(name: 'Empire', playable: false, leader: 'Emperor')
-rene = House::Renegat.create(name: 'Renegates', playable: false, leader: '')
+rene = House::Renegat.create(name: 'Renegates', playable: false, leader: 'Desperado')
 atr = House::Atreides.create(name: 'Atreides', playable: true, leader: 'Duke')
 har = House::Harkonnen.create(name: 'Harkonnen', playable: true, leader: 'Baron')
 cor = House::Corrino.create(name: 'Corrino', playable: true, leader: 'Padishah')

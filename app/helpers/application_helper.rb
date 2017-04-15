@@ -111,13 +111,13 @@ module ApplicationHelper
 
   def online_users
     @online_users = []
-    sessions = Session.order('created_at ASC').all
-    sessions.each do |session|
-      user = Marshal.load(Base64.decode64(session.data))['user_id']
-      if user
-        @online_users << User.find(user)
-      end
-    end
+    # sessions = Session.order('created_at ASC').all
+    # sessions.each do |session|
+    #   user = Marshal.load(Base64.decode64(session.data))['user_id']
+    #   if user
+    #     @online_users << User.find(user)
+    #   end
+    # end
     @online_users
   end
 
