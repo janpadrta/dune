@@ -1,0 +1,12 @@
+<div class="authform">
+  <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: {method: :post}) do |f| %>
+      <h3>Přepošli odemykací údaje</h3>
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <%= f.label :email %><br/>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+      <%= f.submit 'Odešli odemykací údaje', :class => 'button right' %>
+  <% end %>
+</div>

@@ -24,6 +24,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'devise'
 gem 'high_voltage'
 gem 'therubyracer', :platform=>:ruby
+gem 'activerecord-session_store'
 group :development do
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'

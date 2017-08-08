@@ -5,7 +5,7 @@
         <ul class='menu'>
           <li><a class='menukomunikace' title='Komunikace'></a>
             <ul>
-              <li><%= link_to 'Doručená pošta [' + current_user.neprocteno_sprav.to_s + ']', '#' %>
+              <li><%= link_to 'Doručená pošta [' + current_user.neprecteno_sprav.to_s + ']', '#' %>
               <li><%= link_to 'Odeslaná pošta', '#' %>
               <li><%= link_to 'Poslat poštu', '#' %>
                 <br>
@@ -35,14 +35,14 @@
 
                 <br>
 
-              <% if can? :sprava_rod, House %>
+              <% if current_user.pristup_sprava_rod? %>
                   <li><%= link_to 'Správa Velkorodu', '#' %>
                   <li><%= link_to 'Národní databáze hráčů', '#' %></li>
               <% else %>
                   <li><%= link_to 'Velkorod', '#' %></li>
               <% end %>
 
-              <% if can? :sprava, Imperium %>
+              <% if current_user.pristup_sprava_imperium? %>
                   <li><%= link_to 'Správa Impéria', '#' %></li>
               <% else %>
                   <li><%= link_to 'Impérium', '#' %></li>
@@ -130,7 +130,7 @@
               <li><%= link_to 'Seznam vašich lén ', '#' %>
               <li><%= link_to 'Zástavba lén', '#' %>
               <li><%= link_to 'Léna k osídlení', planets_path %>
-                <% if can? :sprava_rod, House %>
+                <% if current_user.pristup_sprava_rod? %>
                   <li><%= link_to 'Kolonizovat planetu', '#' %></li>
               <% end %>
               <br>

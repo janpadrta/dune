@@ -1,0 +1,49 @@
+<div class="authform">
+  <h3>Úprava účtu <%= resource.email %></h3>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control', readonly: true %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Čeká se na potvrzení: <%= resource.unconfirmed_email %></div>
+        <% end %>
+        <%= f.label :mobil %>
+        <%= f.text_field :mobil, class: 'form-control', maxlength: 9 %>
+        <p>Po uložení telefonního čísla (ve formátu 777123456) Vám bude zaslána kontrolní sms. Pokud ji neobdržíte do 10 minut, zkontrolujte správnost Vašeho čísla a případně nás kontaktujte.</p>
+      </div>
+      <div class="form-group">
+        Zasíat upozornění:
+        <br/>
+        <%= f.label :upozorneni, 'mailem:' %>
+        <%= f.check_box :upozorneni, class: '' %>
+        <br/>
+        <%= f.label :sms, 'smskou:' %>
+        <%= f.check_box :sms, class: '' %>
+      </div>
+      <fieldset>
+        <p>Pokud nechcete měnit heslo, nechejte tato pole volná.</p>
+        <p>Nové heslo musí mít minimálně 8 znaků.</p>
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, :autocomplete => 'off', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+      </fieldset>
+      <fieldset>
+        <p>Uložení změn musíte potvrdit zadáním aktuálně platného hesla.</p>
+        <div class="form-group">
+          <%= f.label :current_password %>
+          <%= f.password_field :current_password, class: 'form-control' %>
+        </div>
+      </fieldset>
+      <%= f.submit 'Update', :class => 'button right' %>
+  <% end %>
+</div>
