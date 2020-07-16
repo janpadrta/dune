@@ -20,7 +20,7 @@
 
 class Planet < ApplicationRecord
   belongs_to :system
-  belongs_to :house
+  belongs_to :house, optional: true
   has_many :fields
 
   after_create :fields_creation

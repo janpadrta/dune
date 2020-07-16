@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.5.1'
-gem 'rails', '~> 5.2.1', '>= 5.2.0'
+ruby '2.6.3'
+gem 'rails', '6.0.3'
 gem 'sqlite3'
 gem 'puma', '3.12.0'
 gem 'sass-rails', '~> 5.0'
@@ -15,15 +15,15 @@ end
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  # gem 'spring'
+  # gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'annotate'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'devise'
 gem 'high_voltage'
-gem 'mini_racer'#, :platform=>:ruby
+# gem 'mini_racer'#, :platform=>:ruby
 gem 'activerecord-session_store'
 group :development do
   gem 'better_errors'
@@ -35,7 +35,7 @@ group :development do
   gem 'foreman'
   gem 'hub', :require=>nil
   gem 'rails_layout'
-  gem 'spring-commands-rspec'
+  # gem 'spring-commands-rspec'
 end
 group :development, :test do
   gem 'factory_girl_rails'
@@ -51,3 +51,4 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
